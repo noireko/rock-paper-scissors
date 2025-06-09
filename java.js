@@ -70,7 +70,7 @@ function playGame() {
         console.log(humanScore);
         console.log(computerScore);
     }
-
+}
 
 playGame();
 playGame();
