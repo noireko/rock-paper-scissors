@@ -53,17 +53,17 @@ function playRound(humanChoice, computerChoice) {
 const humanChoice = userChoice();
 const computerChoice = pcChoice();
 
-playRound(humanSelection, computerSelection);
+playRound(humanChoice, computerChoice);
 
 function playGame(roundPlayed) {
-    roundPlayed = playRound()
-    if (roundPlayed.includes("Win")) {
+    let roundPlayed = playRound()
+    if (roundPlayed.includes("Win") == true) {
         console.log(humanScore + 1);
         console.log(computerScore);
-    } else if (roundPlayed.includes("Loose")) {
+    } else if (roundPlayed.includes("Loose") == true) {
         console.log(humanScore);
         console.log(computerScore + 1);
-    } else if (roundPlayed.includes("Tie")) {
+    } else if (roundPlayed.includes("Tie") == true) {
         console.log(humanScore);
         console.log(computerScore);
     }
