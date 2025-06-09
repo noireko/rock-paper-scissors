@@ -49,6 +49,8 @@ function playRound(humanChoice, computerChoice) {
     } else if (humanChoice == "scissors" && computerChoice == "scissors") {
         return console.log("PC picks scissors, it's a Tie")
     }
-    
-    
+}
+
+function playGa {
+
 }
