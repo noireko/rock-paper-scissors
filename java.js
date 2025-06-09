@@ -22,13 +22,12 @@ function pcChoice() {
     }
 }
 
-function userChoice() {
-    prompt("Choose your option: Rock, Paper, or Scissors");
+function userChoice(choice) {
+    choice = prompt("Choose your option: Rock, Paper, or Scissors");
+    return choice.toLowerCase()
 }
 
 function playRound(humanChoice, computerChoice) {
-    let humanChoice = userChoice()
-    let computerChoice = pcChoice()
     if (humanChoice == "rock" && computerChoice == "paper") {
         console.log("PC picks paper, You Loose")
     } else if (humanChoice == "rock" && computerChoice == "scissors") {
@@ -49,6 +48,12 @@ function playRound(humanChoice, computerChoice) {
         console.log("PC picks scissors, it's a Tie")
     }
 }
+
+
+const humanChoice = userChoice();
+const computerChoice = pcChoice();
+
+playRound(humanSelection, computerSelection);
 
 function playGame(roundPlayed) {
     roundPlayed = playRound()
