@@ -23,28 +23,27 @@ function pcChoice() {
 }
 
 function userChoice() {
-    choice = prompt("Choose your option: Rock, Paper, or Scissors");
-    return choice.toLowerCase()
+    prompt("Choose your option: Rock, Paper, or Scissors");
 }
 
 function playRound(humanChoice, computerChoice) {
-    const humanChoice = userChoice()
-    const computerChoice = pcChoice()
+    let humanChoice = userChoice()
+    let computerChoice = pcChoice()
     if (humanChoice == "rock" && computerChoice == "paper") {
         console.log("PC picks paper, You Loose")
-    } else if (hChoice == "rock" && computerChoice == "scissors") {
+    } else if (humanChoice == "rock" && computerChoice == "scissors") {
         console.log("PC picks paper, You Win")
     } else if (humanChoice == "rock" && computerChoice == "paper") {
         console.log("PC picks paper, it's a Tie")
     } else if (humanChoice == "paper" && computerChoice == "scissors") {
         console.log("PC picks scissors, You Loose")
-    } else if (hChoice == "paper" && computerChoice == "rock") {
+    } else if (humanChoice == "paper" && computerChoice == "rock") {
         console.log("PC picks rock, You Win")
     } else if (humanChoice == "paper" && computerChoice == "paper") {
         console.log("PC picks paper, it's a Tie")
     } else if (humanChoice == "scissors" && computerChoice == "rock") {
         console.log("PC picks rock, You Loose")
-    } else if (hChoice == "scissors" && computerChoice == "paper") {
+    } else if (humanChoice == "scissors" && computerChoice == "paper") {
         console.log("PC picks paper, You Win")
     } else if (humanChoice == "scissors" && computerChoice == "scissors") {
         console.log("PC picks scissors, it's a Tie")
