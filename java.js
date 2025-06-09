@@ -22,8 +22,8 @@ function pcChoice() {
     }
 }
 
-function userChoice(choice) {
-    choice = prompt("Choose your option: Rock, Paper, or Scissors");
+function userChoice() {
+    let choice = prompt("Choose your option: Rock, Paper, or Scissors");
     return choice.toLowerCase()
 }
 
