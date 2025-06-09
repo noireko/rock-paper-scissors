@@ -29,23 +29,32 @@ function userChoice() {
 
 function playRound(humanChoice, computerChoice) {
     if (humanChoice == "rock" && computerChoice == "paper") {
-        return "PC picks paper, You Loose"
+        console.log(`PC picks ${computerChoice}, You Loose`)
+        return "Loose"
     } else if (humanChoice == "rock" && computerChoice == "scissors") {
-        return "PC picks paper, You Win"
+        console.log(`PC picks ${computerChoice}, You Win`)
+        return "Win"
     } else if (humanChoice == "rock" && computerChoice == "rock") {
-        return "PC picks paper, it's a Tie"
+        console.log(`PC picks ${computerChoice}, It's a Tie`)
+        return "Tie"
     } else if (humanChoice == "paper" && computerChoice == "scissors") {
-        return "PC picks paper, You Loose"
+        console.log(`PC picks ${computerChoice}, You Loose`)
+        return "Loose"
     } else if (humanChoice == "paper" && computerChoice == "rock") {
-        return "PC picks paper, You Win"
+        console.log(`PC picks ${computerChoice}, You Win`)
+        return "Win"
     } else if (humanChoice == "paper" && computerChoice == "paper") {
-        return "PC picks paper, it's a Tie"
+        console.log(`PC picks ${computerChoice}, It's a Tie`)
+        return "Tie"
     } else if (humanChoice == "scissors" && computerChoice == "rock") {
-        return "PC picks paper, You Loose"
+        console.log(`PC picks ${computerChoice}, You Loose`)
+        return "Loose"
     } else if (humanChoice == "scissors" && computerChoice == "paper") {
-        return "PC picks paper, You Win"
+        console.log(`PC picks ${computerChoice}, You Win`)
+        return "Win"
     } else if (humanChoice == "scissors" && computerChoice == "scissors") {
-        return "PC picks paper, it's a Tie"
+        console.log(`PC picks ${computerChoice}, It's a Tie`)
+        return "Tie"
     }
 }
 
@@ -57,16 +66,13 @@ playRound(humanChoice, computerChoice);
 
 function playGame() {
     let roundPlayed = playRound(userChoice(), pcChoice());
-    if (roundPlayed.includes("Win") == true) {
-        console.log("Your Win");
-        console.log(humanScore + 1);
+    if (roundPlayed == "Win") {
+        console.log(humanScore += 1);
         console.log(computerScore);
-    } else if (roundPlayed.includes("Loose") == true) {
-        console.log("Your Loose");
+    } else if (roundPlayed == "Loose") {
         console.log(humanScore);
-        console.log(computerScore + 1);
-    } else if (roundPlayed.includes("Tie") == true) {
-        console.log("Tie");
+        console.log(computerScore += 1);
+    } else if (roundPlayed == "Tie") {
         console.log(humanScore);
         console.log(computerScore);
     }
