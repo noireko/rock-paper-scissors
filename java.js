@@ -58,12 +58,6 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-
-const humanChoice = userChoice();
-const computerChoice = pcChoice();
-
-playRound(humanChoice, computerChoice);
-
 function playGame() {
     let roundPlayed = playRound(userChoice(), pcChoice());
     if (roundPlayed == "Win") {
